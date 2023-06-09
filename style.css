@@ -22,7 +22,12 @@ body{
     box-shadow: 01rem 0.1rem 0.1rem #c4c4c4,
     -0.1rem 0rem 01rem #c4c4c4;
 }
-
+.text-justify{
+    text-align:justify ;
+}
+.text-white{
+    color: white;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -62,12 +67,106 @@ nav ul li:hover{
     
 }
 
+.banner{
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    min-height: 95vh;
+    justify-content:center ;
+    
+}
+.banner article{
+    flex-basis: 50%;
+    margin: 1rem;
+}
+.banner_heading{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem ;
+     
+}
+.banner_para{
+    font-size: 1.5rem;
+
+}
+.banner aside{
+    flex-basis: 50%;
+    text-align: center;
+}
+.banner_img{
+    width: 55rem;
+    height: 55rem;
+    border: 0.3rem solid;
+
+}
+#blog-about{
+    background-color: #4c4c4c;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.card{
+    flex:1;
+    border-radius: 0.6rem;
+    background-color: #c4c4c4;
+    padding: 3rem 1rem;
+    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+    gap:0.6rem;
+
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card_header{
+    font-size: 3rem;
+    text-align:center;
+    
+}
+card_para{
+    padding: 0.4rem 0;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+button{
+    background-color: orange;
+    border:none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 992px) {
+    .banner{
+        flex-direction: column;
+    }
+    .banner article{
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
     
 }
 @media screen and (max-width: 768px) {
     html{
         font-size: 55.5%;
+    }
+    .banner article{
+        width: 80%;
     }
 
 }
@@ -82,5 +181,15 @@ nav ul li:hover{
         flex-direction: column;
         padding-left: 3.5rem;
     }
+    banner{
+        min-height: auto;
+    }
+    .banner article{
+        width: 90%;
+    }
+    .banner_img{
+        max-width: 100%;
+    }
+
 
 }
